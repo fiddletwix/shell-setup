@@ -1,0 +1,25 @@
+---
+- hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Copy files over
+      copy:
+        src: "files/{{ item }}"
+        dest: "{{ ansible_user_dir }}"
+        mode: 0600
+        owner: "{{ ansible_user_id }}"
+        backup: yes
+      with_items:
+        - .bashrc
+        - .profile
+
+    - name: create symlink
+      file:
+        path: "{{ ansible_user_dir }}/.bash_profile"
+        state: link
+        src: "{{ ansible_user_dir }}/.profile"
+        owner: "{{ ansible_user_id }}"
+        backup: yes
+
+        
+      
