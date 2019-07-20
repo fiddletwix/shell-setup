@@ -1,3 +1,4 @@
+
 #############################################################
 # Prevent multiple includes
 #
@@ -38,20 +39,6 @@ export HISTFILESIZE=1000000
 shopt -s histappend
 PROMPT_COMMAND="_bash_history_append; ${PROMPT_COMMAND}"
 #############################################################
-
-#############################################################
-# Test if ara is installed. If so, add ARA related variables
-#
-ARA_INSTALLED=`(echo "try:"; echo " import ara"; echo " print '0'"; echo "except:"; echo " print '1'")| python`
-
-if [[ $ARA_INSTALLED == "0" ]]; then
-    export ARA_LOCATION=$(python -c "import os,ara; print(os.path.dirname(ara.__file__))")
-    export ANSIBLE_CALLBACK_PLUGINS=${ARA_LOCATION}/plugins/callbacks
-    export ANSIBLE_ACTION_PLUGINS=${ARA_LOCATION}/plugins/actions
-    export ANSIBLE_LIBRARY=${ARA_LOCATION}/plugins/modules
-fi
-#############################################################
-
 
 #############################################################
 # Include iterm2 integration
