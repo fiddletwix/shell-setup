@@ -68,7 +68,7 @@ OS=`uname -s`
 #
 if [[ $OS == "Darwin" ]]; then
     # Use local SSH_AUTH_SOCK
-    if [[ -z $SSH_AUTH_SOCK ]]; then
+    if [[ -z $SSH_AUTH_SOCK || ${SSH_AUTH_SOCK:0:7} != "/private" ]]; then
 	export SSH_AUTH_SOCK=`ls /private/tmp/com.apple.launchd.*/Listeners`
     fi
 
@@ -119,7 +119,7 @@ case "$TERM" in
 esac
 
 #############################################################
-# Misc functions for path manipulation
+# Misc functions we want to predefine
 #
 strip_path() {
         PATH=${PATH//":$1:"/:} #delete all instances in the middle
@@ -141,8 +141,16 @@ path_append() {
     fi
 }
 
-#function genmac {
-#   mac=$(echo $FQDN|md5|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\).*$/02:\1:\2:\3:\4:\5/')
-#   echo $mac
-#}
+function genmac {
+   mac=$(echo $FQDN|md5|sed 's/^\(..\)\(..\)\(..\)\(..\)\(..\).*$/02:\1:\2:\3:\4:\5/')
+   echo $mac
+}
 #############################################################
+
+
+#############################################################
+# Include system specific items
+
+if [ -f $HOME/.bash_supplemental ]; then
+    . $HOME/.bash_supplemental
+fi

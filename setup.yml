@@ -5,8 +5,7 @@
     - name: remove files
       file:
         state: absent
-        src: "{{ ansible_user_dir }}/git/shell-setup/files/{{ item }}"
-        dest: "{{ ansible_user_dir }}/{{ item }}"
+        path: "{{ ansible_user_dir }}/{{ item }}"
         owner: "{{ ansible_user_id }}"
         backup: yes
       with_items:
@@ -30,13 +29,6 @@
         - .emacs
         - .emacs.d
 
-#    - name: synchronize directories
-#      copy:
-#        src: "files/{{ item }}/"
-#        dest: "{{ ansible_user_dir }}/{{ item }}/"
-#      with_items:
-#        - .emacs.d
-        
     - name: create symlink
       file:
         path: "{{ ansible_user_dir }}/.bash_profile"
