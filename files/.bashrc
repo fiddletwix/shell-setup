@@ -59,6 +59,10 @@ if [[ $OS == "Darwin" ]]; then
 	export SSH_AUTH_SOCK=`ls /private/tmp/com.apple.launchd.*/Listeners`
     fi
 
+    if [[ `which gsed` =~ "gsed" ]]; then
+	alias sed=`which gsed`
+    fi
+				     
     alias ejectall='osascript -e "tell application \"Finder\" to eject (every disk whose ejectable is true)"'
     alias ejectcd='drutil tray eject'
 fi
