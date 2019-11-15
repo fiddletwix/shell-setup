@@ -36,7 +36,19 @@ _bash_history_append() {
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=1000000
 export HISTFILESIZE=1000000
+export HISTTIMEFORMAT='%F %T '
+
+# ignore duplicate commands and commands that start with space
+export HISTCONTROL=ignoreboth
+
+# Commands to ignore in history, delimited by ':'
+HISTIGNORE='history'
+
+# Append to history
 shopt -s histappend
+
+# force commands entered on more than one line to be a single line in history
+shopt -s cmdhist
 PROMPT_COMMAND="_bash_history_append; ${PROMPT_COMMAND}"
 #############################################################
 
@@ -62,7 +74,7 @@ if [[ $OS == "Darwin" ]]; then
     if [[ `which gsed` =~ "gsed" ]]; then
 	alias sed=`which gsed`
     fi
-				     
+
     alias ejectall='osascript -e "tell application \"Finder\" to eject (every disk whose ejectable is true)"'
     alias ejectcd='drutil tray eject'
 fi
@@ -72,7 +84,7 @@ fi
 # Linux Specific items
 #
 if [[ $OS == "Linux" ]]; then
-  alias rm='rm -I --preserve-root'  
+  alias rm='rm -I --preserve-root'
   alias chown='chown --preserve-root'
   alias chmod='chmod --preserve-root'
   alias chgrp='chgrp --preserve-root'
