@@ -3,7 +3,7 @@
              '("melpa" . "https://melpa.org/packages/") t)
 ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 ;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-;; (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (setq vc-follow-symlinks t)
 (package-initialize)
 ;; (package-install 'exec-path-from-shell)
