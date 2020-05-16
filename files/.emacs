@@ -2,8 +2,8 @@
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
 ;; (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
-;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) 
-(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t) 
+;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+(add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 (setq vc-follow-symlinks t)
 (package-initialize)
 ;; (package-install 'exec-path-from-shell)
@@ -14,7 +14,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (py-autopep8 yaml-mode ansible flycheck elpy))))
+ '(package-selected-packages
+   (quote
+    (terraform-mode py-autopep8 yaml-mode ansible flycheck elpy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
