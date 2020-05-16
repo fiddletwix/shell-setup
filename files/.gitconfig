@@ -1,0 +1,7 @@
+[push]
+	default = matching
+[user]
+	name = Len Borowski
+	email = len@lenster.com
+[core]
+	excludesfile = ~/.gitignore_global

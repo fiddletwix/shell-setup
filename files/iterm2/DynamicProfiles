@@ -1,0 +1,22 @@
+{
+  "Profiles": [
+     {
+       "Name": "Dynamic Profile Default",
+       "Guid": "DEFAULT",
+       "Silence Bell": true,
+       "Visual Bell": false,
+       "Unlimited Scrollback": 1,
+       "Normal Font": "SourceCodePro-Regular 16",
+       "Keyboard Map": {
+         "0xf702-0x280000": {
+	   "Action": 10,
+	   "Text": "b"
+	  },
+         "0xf703-0x280000": {
+	   "Action": 10,
+	   "Text": "f"
+	  }
+       }
+     }
+  ]
+}

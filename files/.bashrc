@@ -1,3 +1,7 @@
+#############################################################
+# Suppress bash deprecation warning to use zsh
+#
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 #############################################################
 # Prevent multiple includes

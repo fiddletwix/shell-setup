@@ -1,0 +1,52 @@
+#
+# editor temp files
+#
+\#*#
+*~
+.\#*
+.idea
+
+#
+# compiled files
+#
+*.py[co]
+*.log
+*.o
+__pycache__
+
+#
+# archive files
+#
+#*.rpm
+*.deb
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.zip
+*.7z
+*.rar
+
+#
+# VCS relatd
+#
+.svn
+.svn/*
+
+#
+# OS related
+#
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+#
+# Ansible related
+#
+*.retry
+
+# virtual environments
+#venv*

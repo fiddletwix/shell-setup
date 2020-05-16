@@ -1,0 +1,20 @@
+# Core brew items
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+
+# Misc tools
+brew "transmission-cli"
+
+# Misc apps that cannot be installed via appstore
+cask "steam"
+
+# Paid Apple AppStore apps
+mas "Aperture", id: 408981426
+mas "Compressor", id: 424390742
+mas "Logic Pro X", id: 634148309
+mas "Final Cut Pro", id: 424389933
+
+# Paid AppStore Apps
+mas "Delicious Library", id: 635124250

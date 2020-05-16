@@ -1,0 +1,94 @@
+# Core brew items
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/core"
+
+tap "hudochenkov/sshpass"    # for ansible
+tap "yleisradio/terraforms"  # terraform switcher
+
+# Editors
+brew "emacs"
+cask "atom"
+
+# Shell enhancements
+brew "bash-completion"
+
+# developer related
+brew "git"
+brew "git-extras"
+brew "go"
+brew "python3"
+
+# devops tools
+brew "packer"
+brew "terraform"
+brew "hudochenkov/sshpass/sshpass" # for ansible
+brew "yleisradio/terraforms/chtf"
+
+# "missing" tools
+brew "gnu-sed"
+brew "telnet"
+brew "unrar"
+brew "watch"
+brew "wget"
+brew "xz"
+
+# misc tools
+brew "ipmitool"
+brew "jq"
+brew "libvirt"
+brew "mas"
+brew "opensc"
+brew "openssl"
+brew "pkg-config"
+brew "potrace"		# Converts BMP to SVG
+brew "pv"
+brew "tmux"
+brew "ykman"
+
+# Misc apps that cannot be installed via appstore
+cask "1password"
+cask "aerial"
+cask "coconutbattery"
+cask "daisydisk"
+cask "divvy"
+cask "docker"
+cask "dropbox"
+cask "firefox"
+cask "google-chrome"
+cask "handbrake"
+cask "istat-menus"
+cask "iterm2"
+cask "java"
+cask "pycharm-ce"
+cask "quicksilver"
+cask "sekey"
+cask "vlc"
+cask "vmware-fusion"
+cask "wireshark"
+cask "xquartz"
+
+# Fonts
+cask "font-source-code-pro"
+cask "font-source-sans-pro"
+
+# Paid Apple Apps
+mas "Remote Desktop", id: 409907375
+
+# Free Apple Apps
+mas "Numbers", id: 409203825
+mas "Keynote", id: 409183694
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
+
+# Paid App Store Software
+# mas "JollysFastVNC Pro", id: 406781941
+mas "Pixelmator", id: 407963104
+mas "Textual IRC Client", id: 1262957439
+mas "Things", id: 904280696
+
+# Free Apps
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "OTP Manager", id: 928941247
+mas "Slack", id: 803453959

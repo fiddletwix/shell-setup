@@ -1,1 +1,3 @@
 files/.emacs.d/elpa/archives/*
+*.elc
+*.pyc
