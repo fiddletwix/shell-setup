@@ -20,11 +20,13 @@ brew "git-extras"
 brew "go"
 brew "python3"
 
-# devops tools
+# devops tool
+brew "nomad"
 brew "packer"
 brew "terraform"
 brew "hudochenkov/sshpass/sshpass" # for ansible
 brew "yleisradio/terraforms/chtf"
+
 
 # "missing" tools
 brew "gnu-sed"
@@ -46,6 +48,7 @@ brew "potrace"		# Converts BMP to SVG
 brew "pv"
 brew "tmux"
 brew "ykman"
+brew "ykpers"
 
 # Misc apps that cannot be installed via appstore
 cask "1password"
