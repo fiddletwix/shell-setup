@@ -9,6 +9,8 @@ brew "transmission-cli"
 
 # Misc apps that cannot be installed via appstore
 cask "steam"
+cask "discord"
+cask "parsec"
 
 # Paid Apple AppStore apps
 mas "Aperture", id: 408981426

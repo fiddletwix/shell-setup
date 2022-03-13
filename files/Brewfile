@@ -3,9 +3,10 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
+tap "homebrew/services"
 
 tap "hudochenkov/sshpass"    # for ansible
-tap "yleisradio/terraforms"  # terraform switcher
+tap "carlocab/personal"
 
 # Editors
 brew "emacs"
@@ -17,38 +18,64 @@ brew "bash-completion"
 # developer related
 brew "git"
 brew "git-extras"
+brew "git-filter-repo"
 brew "go"
+brew "libtool"
 brew "python3"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "rust"
+brew "svn"
+brew "swing"
 
 # devops tool
+brew "helm"
 brew "nomad"
+brew "kubectx"
+brew "kubernetes-cli"
 brew "packer"
+brew "rke"
 brew "terraform"
+brew "terraform-docs"
+brew "tflint"
+brew "vault"
 brew "hudochenkov/sshpass/sshpass" # for ansible
-brew "yleisradio/terraforms/chtf"
-
 
 # "missing" tools
+brew "fd"
 brew "gnu-sed"
+brew "gnutls"
+brew "grpcurl"
+brew "mtr"
+brew "ncdu
+brew "nmap"
 brew "telnet"
-brew "unrar"
+brew "tldr"
+brew "carlocab/personal/unrar"
 brew "watch"
 brew "wget"
 brew "xz"
 
 # misc tools
+brew "cdrtools"
+brew "exiftool"
 brew "ipmitool"
 brew "jq"
 brew "libvirt"
 brew "mas"
+brew "mdcat"
 brew "opensc"
 brew "openssl"
 brew "pkg-config"
 brew "potrace"		# Converts BMP to SVG
 brew "pv"
+brew "qemu"
+brew "tldr"             # improved man pages
 brew "tmux"
 brew "ykman"
 brew "ykpers"
+brew "yq"
+
 
 # Misc apps that cannot be installed via appstore
 cask "1password"
@@ -63,7 +90,7 @@ cask "google-chrome"
 cask "handbrake"
 cask "istat-menus"
 cask "iterm2"
-cask "java"
+#cask "java"
 cask "pycharm-ce"
 cask "quicksilver"
 cask "sekey"
