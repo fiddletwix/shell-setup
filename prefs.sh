@@ -54,6 +54,8 @@ main() {
     fi
     set -e
 
+    echo "Disabling workspace auto swoosh (switching desltpps when focusing on an app"
+    defaults write com.apple.dock workspaces-auto-swoosh -bool false
     echo "Autohide the dock and remove autohide delay"
     defaults write com.apple.dock autohide -integer 1
     defaults write com.apple.dock autohide-time-modifier -float 1
